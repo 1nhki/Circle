@@ -3,66 +3,48 @@
 #include <cstdlib>
 using namespace std;
 
-	 static int radius = 0;
-	 double phi3 = 3.14 ;
-	 double phi = 22.0 / 7.0 ;
-	 
+static int radius = 0;
+const float phi3 = 3.14 ;
+const float phi = 22.0 / 7.0 ;
+
 	 
 
 class lingkaran{
 public:
-void input(){
-	//input 
- cout << "input radius : ";
- cin >> radius;
+	void input(){
+		//input 
+		cout << "input radius : ";
+		cin >> radius;
 	};
- void read(){
-	 //print a input
-	 
-	cout << "\nradius : " << radius << ends ;
-			};
-			
- void area (){
-						if (radius  %7==0){
-	 
-	 							float luas90 = radius * radius * phi ;
-							cout<< "\narea: " << luas90 ;
-															  
-										}
-				 
-						else {
-							float Luas = radius * radius * phi3 ;
-								cout << "\narea: " <<  Luas;
-							}
-	 
-			};
 
-void circumference(){
+	void read(){
+		//print a input
+		cout << "\nradius : " << radius << ends ;
+	};
+				
+	void area (){
+		if (radius  %7==0){
+			float luas90 = radius * radius * phi ;
+			cout<< "\narea: " << luas90 ;								
+		}
 
+		else {
+			float Luas = radius * radius * phi3 ;
+			cout << "\narea: " <<  Luas;
+		}		
+	};
 
-						if (radius %7==0){
-	 							float kl = radius * 2 * phi ;
-							cout<< "\ncircumference : " << kl ;
-															  
-										}
-				 
-						else {
-							float kl = radius * 2 * phi3 ;
-								cout << "\ncircumference : " <<  kl;
-							}
-
-
-
-	
+	void circumference(){
+		if (radius %7==0){
+			float kl = radius * 2 * phi ;
+			cout<< "\ncircumference : " << kl ;									
+		}
+		else {
+			float kl = radius * 2 * phi3 ;
+			cout << "\ncircumference : " <<  kl;
+		}	
+	};
 };
-
-
-
-
-		
-		
-
-	};
 	
 	
 
@@ -82,18 +64,18 @@ int main(int argc, char *argv[]) {
 	//
 	lg.read();
 
-if (strcmp(lol,"A")== 0 || strcmp(lol,"a")== 0){
-	lg.area();
-	}
+	if (strcmp(lol,"A")== 0 || strcmp(lol,"a")== 0){
+		lg.area();
+		}
 
-else if (strcmp(lol,"C")== 0 || strcmp(lol,"c")== 0){
-	lg.circumference();
-	}
+	else if (strcmp(lol,"C")== 0 || strcmp(lol,"c")== 0){
+		lg.circumference();
+		}
 
-else {
-	//the name "formuLa.sh" is useless i write it just make it cool XD
-	cout<< "\nFormula.sh : error";
-}
+	else {
+		//the name "formuLa.sh" is useless i write it just make it cool XD
+		cout<< "\nFormula.sh : error";
+	}
 
   return 0;
 }
